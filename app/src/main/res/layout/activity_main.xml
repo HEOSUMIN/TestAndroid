@@ -32,4 +32,22 @@
         android:layout_height="wrap_content"
         android:text="Sms" />
 
+    <Button
+        android:id="@+id/btMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Map" />
+
+    <Button
+        android:id="@+id/btRecog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="voice" />
+
+    <TextView
+        android:id="@+id/tvRecog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="recognition" />
+
 </LinearLayout>

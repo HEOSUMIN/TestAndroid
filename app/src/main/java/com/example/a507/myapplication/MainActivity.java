@@ -6,10 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    protected Button btHomepage,btDial,btCall,btSms;
-
+    protected Button btHomepage,btDial,btCall,btSms,btMap, btRecog;
+    protected  TextView tvRecog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,5 +57,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btMap = (Button)findViewById(R.id.btMap);
+        btMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse("geo:36.321609,127.337957?z=20"));
+                startActivity(intent);
+            }
+        });
+
+        tvRecog=(TextView)findViewById(R.id.tvRecog);
+
+        btRecog=(Button)findViewById(R.id.btRecog);
+        btRecog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 }
